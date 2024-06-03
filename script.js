@@ -9,10 +9,10 @@ let item1 = localStorage.getItem('Username');
 let item2 = localStorage.getItem('Password');
 
 if(item1!=null || item2!=null){
-	let btn = document.createElement('button');
+	let btn = document.createElement('input');
 	btn.setAttribute("id","existing");
 	btn.setAttribute("type","submit");
-	btn.innerText = "Login as existing user.";
+	btn.setAttribute("value","Login as existing user.");
 	form.append(btn);
 
 	btn.addEventListener("click",(event)=>{
