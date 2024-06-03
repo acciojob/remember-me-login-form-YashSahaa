@@ -11,7 +11,7 @@ let item2 = localStorage.getItem('Password');
 if(item1!=null || item2!=null){
 	let btn = document.createElement('button');
 	btn.setAttribute("id","existing");
-	btn.setAttribute("type","submit");
+	btn.setAttribute("type","button");
 	btn.innerText = "Login as existing user";
 	form.append(btn);
 
