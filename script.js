@@ -3,23 +3,30 @@ const submit = document.getElementById('submit');
 const username = document.getElementById('username');
 const password = document.getElementById('password');
 const checkbox = document.getElementById('checkbox');
-const form = document.querySelector('form');
+const existing = document.getElementById('existing');
+// const form = document.querySelector('form');
 
 let item1 = localStorage.getItem('Username');
 let item2 = localStorage.getItem('Password');
 
 if(item1!=null || item2!=null){
-	let btn = document.createElement('button');
-	btn.setAttribute("id","existing");
-	btn.setAttribute("type","button");
-	btn.innerText = "Login as existing user";
-	form.append(btn);
+	existing.removeAttribute("class");
+	// let btn = document.createElement('button');
+	// btn.setAttribute("id","existing");
+	// btn.setAttribute("type","button");
+	// btn.innerText = "Login as existing user";
+	// form.append(btn);
 
-	btn.addEventListener("click",(event)=>{
-		event.preventDefault()
-		alert("Logged in as " + localStorage.getItem('Username'));
-	})
+	// btn.addEventListener("click",(event)=>{
+	// 	event.preventDefault()
+	// 	alert("Logged in as " + localStorage.getItem('Username'));
+	// })
 }
+
+existing.addEventListener("click",(event)=>{
+	event.preventDefault()
+	alert("Logged in as " + localStorage.getItem('Username'));
+})
 
 submit.addEventListener("click",(event)=>{
 	event.preventDefault()
